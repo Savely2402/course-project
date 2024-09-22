@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>593</width>
+    <height>568</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: 	rgb(191, 233, 123);
+font-family: Myanmar Text;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="focusPolicy">
+      <enum>Qt::FocusPolicy::NoFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: white;
+border-radius: 20px;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLabel" name="WindowTitle">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Личный кабинет</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QFormLayout" name="PersonInfoBlock">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="PersonInfoLabelsBlock">
+          <property name="spacing">
+           <number>11</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="NameLabel">
+            <property name="text">
+             <string>ФИО:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="LoginLabel">
+            <property name="text">
+             <string>Логин:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="PhoneLabel">
+            <property name="text">
+             <string>Номер телефона:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="RoleLabel">
+            <property name="text">
+             <string>Роль:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="DepartmentLabel">
+            <property name="text">
+             <string>Отдел:</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="1">
+         <layout class="QVBoxLayout" name="PersonInfoValuesBlock">
+          <property name="spacing">
+           <number>11</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="NameValue">
+            <property name="text">
+             <string>ывава</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="LoginValue">
+            <property name="text">
+             <string>ыва</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="PhoneValue">
+            <property name="text">
+             <string>выа</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="RoleValue">
+            <property name="text">
+             <string>ыва</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="DepartmenValue">
+            <property name="text">
+             <string>ыва</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="ChangePasswordTitle">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Смена пароля</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>17</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="ChangePasswordBlock">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="ChangePasswordLabelsBlock">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="OldPasswordLabel">
+              <property name="text">
+               <string>Старый пароль:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="NewPasswordLabel">
+              <property name="text">
+               <string>Новый пароль:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="ConfirmNewPasswordLabel">
+              <property name="text">
+               <string>Подтверждение:</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="ChangePasswordInputsBlock">
+            <item>
+             <widget class="QLineEdit" name="OldPasswordInput">
+              <property name="styleSheet">
+               <string notr="true">border-bottom: 1px solid rgb(191, 233, 123);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="NewPasswordInput">
+              <property name="styleSheet">
+               <string notr="true">border-bottom: 1px solid rgb(191, 233, 123);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="ConfirmNewPasswordInput">
+              <property name="styleSheet">
+               <string notr="true">border-bottom: 1px solid rgb(191, 233, 123);</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="ChangePasswordButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+border-radius: 10;
+background-color: '#bfe97b';
+padding: 10px;
+}
+
+QPushButton:hover {
+background-color: #a7ca6b;
+}</string>
+          </property>
+          <property name="text">
+           <string>Сменить пароль</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="ChangePhoneTitle">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Смена номера телефона</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="spacing">
+         <number>17</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="ChangePhoneBlock">
+          <item>
+           <widget class="QLabel" name="ChangePhoneLabel">
+            <property name="text">
+             <string>Новый номер телефона:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="ChangePhoneInput">
+            <property name="styleSheet">
+             <string notr="true">border-bottom: 1px solid rgb(191, 233, 123);</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="ChangePhoneButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+border-radius: 10;
+background-color: '#bfe97b';
+padding: 10px;
+}
+
+QPushButton:hover {
+background-color: #a7ca6b;
+}</string>
+          </property>
+          <property name="text">
+           <string>Сменить номер телефона</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item alignment="Qt::AlignmentFlag::AlignHCenter">
+       <widget class="QPushButton" name="ReturnButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+border-radius: 10;
+background-color: '#bfe97b';
+padding: 10px  50px;
+}
+
+QPushButton:hover {
+background-color: #a7ca6b;
+}</string>
+        </property>
+        <property name="text">
+         <string>Назад</string>
+        </property>
+        <property name="autoDefault">
+         <bool>true</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

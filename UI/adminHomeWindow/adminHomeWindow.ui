@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>593</width>
+    <height>422</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: 	rgb(191, 233, 123);
+font-family: Myanmar Text;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="styleSheet">
+      <string notr="true">background-color: white;
+border-radius: 20px;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="WindowTitle">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Администратор</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="AdminButtonsBlock">
+        <item>
+         <widget class="QPushButton" name="PersonAccountButton">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+border-radius: 10;
+background-color: '#bfe97b';
+padding: 10px;
+}
+
+QPushButton:hover {
+background-color: #a7ca6b;
+}</string>
+          </property>
+          <property name="text">
+           <string>Личный кабинет</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="EmployeesListButton">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+border-radius: 10;
+background-color: '#bfe97b';
+padding: 10px;
+}
+
+QPushButton:hover {
+background-color: #a7ca6b;
+}</string>
+          </property>
+          <property name="text">
+           <string>Список сотрудников</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="DepartmentButton">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+border-radius: 10;
+background-color: '#bfe97b';
+padding: 10px;
+}
+
+QPushButton:hover {
+background-color: #a7ca6b;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Отделы</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QPushButton" name="LogoutButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+border-radius: 10;
+background-color: '#bfe97b';
+padding: 10px 50px;
+}
+
+QPushButton:hover {
+background-color: #a7ca6b;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Выйти</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
