@@ -15,24 +15,20 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFormLayout, QFrame, QLabel,
-    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
+from PySide6.QtWidgets import (QApplication, QDialog, QFormLayout, QFrame,
+    QLabel, QLineEdit, QPushButton, QSizePolicy,
     QVBoxLayout, QWidget)
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        if not MainWindow.objectName():
-            MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(544, 308)
-        MainWindow.setMinimumSize(QSize(0, 0))
-        MainWindow.setMaximumSize(QSize(1111111, 1111111))
-        MainWindow.setStyleSheet(u"background-color: 	rgb(191, 233, 123);\n"
+class Ui_Dialog(object):
+    def setupUi(self, Dialog):
+        if not Dialog.objectName():
+            Dialog.setObjectName(u"Dialog")
+        Dialog.resize(544, 302)
+        Dialog.setStyleSheet(u"background-color: 	rgb(191, 233, 123);\n"
 "font-family: Myanmar Text;")
-        self.centralwidget = QWidget(MainWindow)
-        self.centralwidget.setObjectName(u"centralwidget")
-        self.verticalLayout_3 = QVBoxLayout(self.centralwidget)
-        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.frame = QFrame(self.centralwidget)
+        self.verticalLayout_2 = QVBoxLayout(Dialog)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.frame = QFrame(Dialog)
         self.frame.setObjectName(u"frame")
         self.frame.setStyleSheet(u"background-color: white;\n"
 "border-radius: 20px;")
@@ -79,9 +75,9 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addLayout(self.DepartmentNameForm)
 
-        self.pushButton = QPushButton(self.frame)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setStyleSheet(u"QPushButton {\n"
+        self.AddDepartmentButton = QPushButton(self.frame)
+        self.AddDepartmentButton.setObjectName(u"AddDepartmentButton")
+        self.AddDepartmentButton.setStyleSheet(u"QPushButton {\n"
 "border-radius: 10;\n"
 "background-color: '#bfe97b';\n"
 "padding: 10px;\n"
@@ -91,7 +87,7 @@ class Ui_MainWindow(object):
 "background-color: #a7ca6b;\n"
 "}")
 
-        self.verticalLayout.addWidget(self.pushButton)
+        self.verticalLayout.addWidget(self.AddDepartmentButton)
 
         self.ReturnButton = QPushButton(self.frame)
         self.ReturnButton.setObjectName(u"ReturnButton")
@@ -112,23 +108,22 @@ class Ui_MainWindow(object):
         self.verticalLayout.addWidget(self.ReturnButton, 0, Qt.AlignmentFlag.AlignHCenter)
 
 
-        self.verticalLayout_3.addWidget(self.frame)
+        self.verticalLayout_2.addWidget(self.frame)
 
-        MainWindow.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(MainWindow)
+        self.retranslateUi(Dialog)
 
         self.ReturnButton.setDefault(False)
 
 
-        QMetaObject.connectSlotsByName(MainWindow)
+        QMetaObject.connectSlotsByName(Dialog)
     # setupUi
 
-    def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Expense tracker", None))
-        self.WindowTitle.setText(QCoreApplication.translate("MainWindow", u"\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u043e\u0442\u0434\u0435\u043b", None))
-        self.DepartmentNameLabel.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435:", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c", None))
-        self.ReturnButton.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0437\u0430\u0434", None))
+    def retranslateUi(self, Dialog):
+        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Dialog", None))
+        self.WindowTitle.setText(QCoreApplication.translate("Dialog", u"\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u043e\u0442\u0434\u0435\u043b", None))
+        self.DepartmentNameLabel.setText(QCoreApplication.translate("Dialog", u"\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435:", None))
+        self.AddDepartmentButton.setText(QCoreApplication.translate("Dialog", u"\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c", None))
+        self.ReturnButton.setText(QCoreApplication.translate("Dialog", u"\u041d\u0430\u0437\u0430\u0434", None))
     # retranslateUi
 

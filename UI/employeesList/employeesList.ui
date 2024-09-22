@@ -83,19 +83,8 @@ border-radius: 20px;</string>
         </item>
        </layout>
       </item>
-      <item alignment="Qt::AlignmentFlag::AlignHCenter">
-       <widget class="QTableView" name="EmployeesTable">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: green;
-</string>
-        </property>
-       </widget>
+      <item>
+       <widget class="QTableView" name="tableView"/>
       </item>
       <item alignment="Qt::AlignmentFlag::AlignHCenter">
        <widget class="QPushButton" name="ReturnButton">

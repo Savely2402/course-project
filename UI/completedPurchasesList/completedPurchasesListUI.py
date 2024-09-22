@@ -74,12 +74,8 @@ class Ui_Dialog(object):
 
         self.PurchasesTable = QTableView(self.frame)
         self.PurchasesTable.setObjectName(u"PurchasesTable")
-        sizePolicy.setHeightForWidth(self.PurchasesTable.sizePolicy().hasHeightForWidth())
-        self.PurchasesTable.setSizePolicy(sizePolicy)
-        self.PurchasesTable.setStyleSheet(u"background-color: green;\n"
-"")
 
-        self.verticalLayout.addWidget(self.PurchasesTable, 0, Qt.AlignmentFlag.AlignHCenter)
+        self.verticalLayout.addWidget(self.PurchasesTable)
 
         self.ReturnButton = QPushButton(self.frame)
         self.ReturnButton.setObjectName(u"ReturnButton")

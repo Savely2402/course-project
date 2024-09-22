@@ -73,11 +73,12 @@ class Ui_Dialog(object):
 
         self.PurchaseDetails1InputsBlock = QVBoxLayout()
         self.PurchaseDetails1InputsBlock.setObjectName(u"PurchaseDetails1InputsBlock")
-        self.TotalDepartmentBudgetInput = QLineEdit(self.frame)
-        self.TotalDepartmentBudgetInput.setObjectName(u"TotalDepartmentBudgetInput")
-        self.TotalDepartmentBudgetInput.setStyleSheet(u"border-bottom: 1px solid rgb(191, 233, 123);")
+        self.TotalDepartmentBudgetLabel = QLabel(self.frame)
+        self.TotalDepartmentBudgetLabel.setObjectName(u"TotalDepartmentBudgetLabel")
+        sizePolicy.setHeightForWidth(self.TotalDepartmentBudgetLabel.sizePolicy().hasHeightForWidth())
+        self.TotalDepartmentBudgetLabel.setSizePolicy(sizePolicy)
 
-        self.PurchaseDetails1InputsBlock.addWidget(self.TotalDepartmentBudgetInput)
+        self.PurchaseDetails1InputsBlock.addWidget(self.TotalDepartmentBudgetLabel)
 
         self.PurchaseNameInput = QLineEdit(self.frame)
         self.PurchaseNameInput.setObjectName(u"PurchaseNameInput")
@@ -162,11 +163,13 @@ class Ui_Dialog(object):
 
         self.PurchaseDetails2InputsBlock.addWidget(self.QuantityInput)
 
-        self.TotalPriceInput = QLineEdit(self.frame)
-        self.TotalPriceInput.setObjectName(u"TotalPriceInput")
-        self.TotalPriceInput.setStyleSheet(u"border-bottom: 1px solid rgb(191, 233, 123);")
+        self.TotalPriceLabel_2 = QLabel(self.frame)
+        self.TotalPriceLabel_2.setObjectName(u"TotalPriceLabel_2")
+        sizePolicy.setHeightForWidth(self.TotalPriceLabel_2.sizePolicy().hasHeightForWidth())
+        self.TotalPriceLabel_2.setSizePolicy(sizePolicy)
+        self.TotalPriceLabel_2.setStyleSheet(u"margin-top: 5px;")
 
-        self.PurchaseDetails2InputsBlock.addWidget(self.TotalPriceInput)
+        self.PurchaseDetails2InputsBlock.addWidget(self.TotalPriceLabel_2)
 
 
         self.PurchaseDetails2Block.addLayout(self.PurchaseDetails2InputsBlock)
@@ -227,10 +230,12 @@ class Ui_Dialog(object):
         self.WindowTitle.setText(QCoreApplication.translate("Dialog", u"\u0421\u043e\u0432\u0435\u0440\u0448\u0435\u043d\u0438\u0435 \u043f\u043e\u043a\u0443\u043f\u043a\u0438", None))
         self.TotalDepartmentBudgetbel.setText(QCoreApplication.translate("Dialog", u"\u041e\u0431\u0449\u0438\u0439 \u0431\u044e\u0434\u0436\u0435\u0442 \u043e\u0442\u0434\u0435\u043b\u0430:", None))
         self.PurchaseNameLabel.setText(QCoreApplication.translate("Dialog", u"\u041d\u0430\u0438\u043c\u0435\u043d\u043e\u0432\u0430\u043d\u0438\u044f \u043f\u043e\u043a\u0443\u043f\u043a\u0438:", None))
+        self.TotalDepartmentBudgetLabel.setText("")
         self.DescriptionLabel.setText(QCoreApplication.translate("Dialog", u"\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435:", None))
         self.CurrentPriceLabel.setText(QCoreApplication.translate("Dialog", u"\u0421\u0442\u043e\u0438\u043c\u043e\u0441\u0442\u044c:", None))
         self.QuantityLabel.setText(QCoreApplication.translate("Dialog", u"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e: ", None))
         self.TotalPriceLabel.setText(QCoreApplication.translate("Dialog", u"\u041e\u0431\u0449\u0430\u044f \u0446\u0435\u043d\u0430:", None))
+        self.TotalPriceLabel_2.setText(QCoreApplication.translate("Dialog", u"0", None))
         self.BuyButton.setText(QCoreApplication.translate("Dialog", u"\u041a\u0443\u043f\u0438\u0442\u044c", None))
         self.ReturnButton.setText(QCoreApplication.translate("Dialog", u"\u041d\u0430\u0437\u0430\u0434", None))
     # retranslateUi

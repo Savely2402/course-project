@@ -105,14 +105,10 @@ class Ui_Dialog(object):
 
         self.verticalLayout.addLayout(self.ActionsButtonsBlock)
 
-        self.EmployeesTable = QTableView(self.frame)
-        self.EmployeesTable.setObjectName(u"EmployeesTable")
-        sizePolicy.setHeightForWidth(self.EmployeesTable.sizePolicy().hasHeightForWidth())
-        self.EmployeesTable.setSizePolicy(sizePolicy)
-        self.EmployeesTable.setStyleSheet(u"background-color: green;\n"
-"")
+        self.tableView = QTableView(self.frame)
+        self.tableView.setObjectName(u"tableView")
 
-        self.verticalLayout.addWidget(self.EmployeesTable, 0, Qt.AlignmentFlag.AlignHCenter)
+        self.verticalLayout.addWidget(self.tableView)
 
         self.ReturnButton = QPushButton(self.frame)
         self.ReturnButton.setObjectName(u"ReturnButton")

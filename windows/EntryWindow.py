@@ -1,10 +1,12 @@
 
-from PySide6.QtWidgets import QMainWindow, QDialog, QMessageBox
-# Импортируйте ваш сгенерированный файл
+from PySide6.QtWidgets import QMainWindow, QDialog
 from UI.entryWindow.entryWindowUI import Ui_MainWindow
 from UI.adminHomeWindow.adminHomeWindowUI import Ui_Dialog
 from database import DataBase
 from windows.HomeWindowAdministrator import HomeWindowAdministrator
+from windows.HomeWindowAccountant import HomeWindowAccountant
+from windows.HomeWindowEmployee import HomeWindowEmployee
+from utils import show_warning_message
 
 
 class EntryWindow(QMainWindow):
@@ -13,33 +15,43 @@ class EntryWindow(QMainWindow):
         self.entry_window = Ui_MainWindow()
         self.entry_window.setupUi(self)
         self.db = DataBase()
-        self.db.create_table()
+        self.db.db_create_tables()
 
         self.entry_window.LoginButton.clicked.connect(
-            self.on_enter_button_Clicked_clicked)
+            self.on_enter_button_clicked)
 
-    def on_enter_button_Clicked_clicked(self):
+    def on_enter_button_clicked(self):
         login = self.entry_window.LoginInput.text()
         password = self.entry_window.PasswordInput.text()
 
-        if login == '1' and password == '1':
-            self.openHomeWindowAdministrator()
+        if login == '' or password == '':
+            warningMessage = 'Все поля должны быть заполнены!'
+            show_warning_message(warningMessage)
         else:
-            if login == '' or password == '':
-                errorMessage = 'Все поля должны быть заполнены!'
-            self.show_error_message(errorMessage)
+            employee = self.db.db_check_login_and_password(
+                login, password)
+            if employee == None:
+                warningMessage = 'Неверный логин или пароль'
+                show_warning_message(warningMessage)
+            else:
+                id = employee[0]
+                role = employee[7]
 
-    def show_error_message(self, message):
-        error_msg_box = QMessageBox()
-        error_msg_box.setIcon(QMessageBox.Icon.Warning)
-        error_msg_box.setText("Ошибка")
-        error_msg_box.setInformativeText(message)
-        error_msg_box.setWindowTitle("Ошибка")
-        error_msg_box.setStandardButtons(QMessageBox.Ok)
-        error_msg_box.exec_()
+                if role == 'Сотрудник':
+                    self.open_employee_home_window(id)
+                elif role == 'Бухгалтер':
+                    self.open_accountant_home_window(id)
+                elif role == 'Администратор':
+                    self.open_admin_home_window(id)
 
-    def openHomeWindowAdministrator(self):
-        self.close()
+    def open_admin_home_window(self, id):
+        homeWindowAdministrator = HomeWindowAdministrator(id)
+        homeWindowAdministrator.exec()
 
-        homeWindowAdministrator = HomeWindowAdministrator(id=1)
+    def open_employee_home_window(self, id):
+        homeWindowAdministrator = HomeWindowEmployee(id)
+        homeWindowAdministrator.exec()
+
+    def open_accountant_home_window(self, id):
+        homeWindowAdministrator = HomeWindowAccountant(id)
         homeWindowAdministrator.exec()
